@@ -1,17 +1,16 @@
-import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import { OrbitControls } from "@react-three/drei";
 
 function Dimension() {
     return (
-        <Canvas>
-            {/* <OrbitControls /> */}
+        <>
+            <ambientLight args={['#ffff', 1]} />
             <OrbitControls />
             <mesh>
                 <boxGeometry />
-                <meshStandardMaterial />
+                <meshStandardMaterial color='#fff' />
             </mesh>
-        </Canvas>
+        </>
     )
 }
 
